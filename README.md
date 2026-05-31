@@ -4,7 +4,7 @@ A small Node + TypeScript demo that shows how semantic caching works with Ollama
 
 The app accepts a chat prompt, embeds the prompt plus recent conversation history, checks SQLite for a close cached match (configurable), and only calls the LLM when the cache misses.
 
-Chose qwen2.5:0.5b-instruct for the LLM model as it is free and lightweight for demo purposes, as well as All-MiniLM for vector embedding. These can of course be hotswapped without any issues (explained later).
+I chose qwen2.5:0.5b-instruct for the LLM model as it is free and lightweight for demo purposes, as well as All-MiniLM for vector embedding. These can of course be hotswapped without any issues (explained later).
 
 ## What It Shows
 
