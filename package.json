@@ -1,0 +1,29 @@
+{
+  "name": "semantic-caching-demo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Gregory Sastrawidjaya",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "test": "node --import tsx --test"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ollama": "^0.6.3",
+    "sqlite-vec": "^0.1.9"
+  }
+}

@@ -1,0 +1,31 @@
+# One service for my app
+# One service for Ollama
+# One persistent volume for Ollama models
+# One persistent volume for cache database to keep cache state in SQLite
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes: 
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+  
+  app:
+    build: .
+    container_name: semantic-caching-demo
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - sqlite:/app/data
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama-data:
+  sqlite:

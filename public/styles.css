@@ -1,0 +1,23 @@
+body {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+  font-family: sans-serif;
+}
+
+textarea {
+  width: 100%;
+  font-family: monospace;
+}
+
+button {
+  padding: 8px 14px;
+}
+
+pre {
+  padding: 12px;
+  overflow: auto;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+}

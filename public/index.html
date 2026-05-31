@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Semantic Cache Demo</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>Semantic Cache Demo</h1>
+    <p>
+      Type a message and send it. The app sends the previous conversation as context,
+      then shows whether the answer came from the cache or from Ollama.
+    </p>
+
+    <form id="chat-form">
+      <p>
+        <label for="message">New message</label><br>
+        <textarea id="message" rows="4">Explain semantic caching in one paragraph.</textarea>
+      </p>
+
+      <button id="submit-button" type="submit">Send</button>
+      <button id="restart-button" type="button">RESTART conversation</button>
+      <button id="reset-button" type="button">RESET cache</button>
+    </form>
+
+    <h2>1. Conversation history sent with the next request</h2>
+    <p>This starts empty. After each response, the browser adds the user message and assistant answer.</p>
+    <pre id="conversation">[]</pre>
+
+    <h2>2. Answer shown to the user</h2>
+    <pre id="answer">No response yet.</pre>
+
+    <h2>3. Cache decision</h2>
+    <p>This is the short explanation of whether the cache was used.</p>
+    <pre id="cache-summary">No cache decision yet.</pre>
+
+    <h2>4. Cache details</h2>
+    <pre id="cache-info">No cache info yet.</pre>
+
+    <h2>5. Full API response</h2>
+    <pre id="full-response">No response yet.</pre>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
