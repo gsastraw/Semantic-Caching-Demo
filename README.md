@@ -61,9 +61,9 @@ OLLAMA_LLM_MODEL=qwen2.5:0.5b-instruct
 CONFIDENCE_THRESHOLD=0.10
 DATABASE_PATH=./data/cache.db
 ```
-CONFIDENCE_THRESHOLD is the maximum vector distance at which two responses can be considered semantically similar. Lower value = more semantically similar
+CONFIDENCE_THRESHOLD is the maximum vector distance at which two responses can be considered semantically similar. Lower value = more semantically similar. 
 
-This setting configures how semantically similar responses should be when fetching from the cache.
+This setting configures how semantically similar responses should be when fetching from the cache, from 0-1 (corresponds to cosine distance)
 
 Inside Docker, `DATABASE_PATH=./data/cache.db` resolves to `/app/data/cache.db`, and `/app/data` is backed by the `sqlite` Docker volume.
 
